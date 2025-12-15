@@ -104,37 +104,37 @@ This repository provides Terraform templates for automating GitHub repository cr
 
 These repositories contain the actual business logic and user-facing code for each platform.
 
-### Birdwatching
+## Birdwatching
 
-#### [birdwatching_app](https://github.com/Core5-team/birdwatching_app)
+### [birdwatching_app](https://github.com/Core5-team/birdwatching_app)
   - Technology: Flask
   - Responsibility: Core backend application handling user interactions, uploads and data management.
 
-#### [birdwatching_mcp](https://github.com/Core5-team/birdwatching_mcp)
+### [birdwatching_mcp](https://github.com/Core5-team/birdwatching_mcp)
   - Role: MCP configuration and support tooling.
   - Responsibility: This repository contains configuration and supporting components for the MCP integration used by Birdwatching. MCP enables an AI-powered chat feature that allows users to ask contextual questions, such as inquiries about birds in a specific location (e.g. birds in Lviv). The LLM processes user queries using application-provided context and returns domain-aware responses. This repository defines MCP client and server configuration, integration glue code and related setup required to connect the Birdwatching application with the language model.
 
-### Illuminati
+## Illuminati
 
-#### [illuminati_frontend](https://github.com/Core5-team/illuminati_frontend)
+### [illuminati_frontend](https://github.com/Core5-team/illuminati_frontend)
   - Technology: React
   - Responsibility: User interface for all Illuminati workflows.
 
-#### [illuminati_backend](https://github.com/Core5-team/illuminati_backend)
+### [illuminati_backend](https://github.com/Core5-team/illuminati_backend)
   - Technology: Django
   - Responsibility: API and business logic layer for Illuminati.
 
-#### [illuminati_email_service](https://github.com/Core5-team/illuminati_email_service)
+### [illuminati_email_service](https://github.com/Core5-team/illuminati_email_service)
   - Technology: Go
   - Responsibility: Handles email-related workflows such as invitations, notifications and messages.
 
-#### [illuminati_scheduler_service](https://github.com/Core5-team/illuminati_scheduler_service)
+### [illuminati_scheduler_service](https://github.com/Core5-team/illuminati_scheduler_service)
   - Role: Background processing.
   - Responsibility: This service is responsible for triggering time-based actions in the Illuminati system. Rather than executing business logic directly, it instructs the backend to perform specific operations when scheduled conditions are met.
 
-### Portal
+## Portal
 
-#### [portal_frontend](https://github.com/Core5-team/portal_frontend)
+### [portal_frontend](https://github.com/Core5-team/portal_frontend)
   - Technology: HTML, CSS
   - Responsibility: User-facing entry point linking Birdwatching and Illuminati.
 
@@ -142,14 +142,14 @@ These repositories contain the actual business logic and user-facing code for ea
 
 These repositories describe how applications are deployed, configured and observed once infrastructure is in place.
 
-#### [illuminati_helm_charts](https://github.com/Core5-team/illuminati_helm_charts)
+### [illuminati_helm_charts](https://github.com/Core5-team/illuminati_helm_charts)
 
 This repository contains Helm charts used to deploy Illuminati services into the Kubernetes cluster. ArgoCD consumes these charts automatically to keep the cluster state in sync with Git.
 
-#### [illuminati_gitops](https://github.com/Core5-team/illuminati_gitops)
+### [illuminati_gitops](https://github.com/Core5-team/illuminati_gitops)
 
 This repository stores GitOps configuration and environment-specific values. Jenkins pipelines update these values automatically, triggering ArgoCD reconciliations.
 
-#### [illuminati_monitoring](https://github.com/Core5-team/illuminati_monitoring)
+### [illuminati_monitoring](https://github.com/Core5-team/illuminati_monitoring)
 
 This repository contains Ansible playbooks used to configure monitoring and observability tooling. It provisions and configures Grafana Alloy, sets up scraping targets and configures the main node responsible for metrics collection.
